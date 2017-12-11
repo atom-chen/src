@@ -14,7 +14,7 @@ function M.enterGame(  )
 	GameMessage:dispatchEvent{
         name = GameMessage.enterGame
     }
-	GameSceneMgr.replaceLayer("game.gameScenes.gal.galLayer")
+	GameSceneMgr.replaceLayer("game.gameScenes.fight.fightLayer")
 end
 
 function M.exitGame(  )
