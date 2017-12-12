@@ -4,6 +4,7 @@
 --用于创建
 local M = class("GameNode")
 function M:ctor( params )
+	self:setData()
 end
 
 function M:setData(  )

@@ -47,6 +47,7 @@ end
 
 function M.initLayer( clsGameLayer )
      local gameLayer = require(clsGameLayer).new({})
+     dump(M.instance)
      gameLayer:initView(M.instance)
 end
 

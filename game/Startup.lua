@@ -10,6 +10,8 @@ GameMgr = require("game.GameMgr")
 --debugging
 ------------------
 -- require("game.debugging.debugging")
+Helper = require("util.Helper")
+ref = require("game.ref.json.ref")
 GameNode = require("game.gameScenes.GameNode")
 GameSceneMgr = require("game.gameScenes.GameSceneMgr").new()
 display.replaceScene(GameSceneMgr)
