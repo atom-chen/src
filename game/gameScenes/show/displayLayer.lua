@@ -15,13 +15,16 @@ end
 
 function M:initView( parent )
 	M.super.initView(self,parent)
-	self.owner = CCBReader.load("ccbi_hero_info_panel.ccbi")
-	parent:addChild(self.owner)
+	local cache = GameCacheMgr.getGameCacheByName("CacheItem")
+	cache:newItem()
+	-- self.owner = CCBReader.load("ccbi_hero_info_panel.ccbi")
+	-- parent:addChild(self.owner)
 	--左边展示形象
 	--右边分标签栏显示各种属性，已经吃了的东西
 	--下边显示消化中的道具
 	--移动以及拾取操作可参考饥荒
 	--在下方控制框上面显示当前的属性状态(例如,被眩晕，被减数时间，淹水时的死亡倒计时，到危险时间时全屏显示红色)
+	GameMgr.exitGame()
 end
 
 function M:updateView(  )

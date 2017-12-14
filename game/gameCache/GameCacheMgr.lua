@@ -6,11 +6,11 @@ local M = {}
 local GameCache = import(".GameCache")
 local tmGameCache = {}
 local CacheName = {
-	"CachePlayer",
+	-- "CachePlayer",
 	"CacheItem",
 }
 for _,name in pairs(CacheName) do
-	tmGameCache[name] = require("game.gameCaches."..name).new()
+	tmGameCache[name] = require("game.gameCache."..name).new()
 end
 -- GameMessage:addEventListener("request",function(cmdX)
 --     cmdX = cmdX.data

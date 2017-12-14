@@ -24,5 +24,5 @@ GameObj = require("game.gameObjects.GameObj")
 ObjTimeEvent = require("game.gameObjects.ObjTimeEvent")
 GameStateManager = require("util.GameStateManager").new()
 
--- GameCacheMgr = require("gameCaches.GameCacheMgr")
+GameCacheMgr = require("game.gameCache.GameCacheMgr")
 return M

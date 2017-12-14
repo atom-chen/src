@@ -16,7 +16,7 @@ function M:ctor( params )
 
     --通过bind绑定在次GameCache上的View
     self.tmView_bind = {}
-    GameMgr:addEventListener("enterGame",function()
+    GameMessage:addEventListener(GameMessage.enterGame,function()
         self.tmCmdX = GameStateManager:getDataByName(self.cacheName)
         if not self.tmCmdX then
             if not self.isRepeat and self.firstInit then
@@ -29,7 +29,7 @@ function M:ctor( params )
         self:enterGame()
     end)
 
-    GameMgr:addEventListener("exitGame",function()
+    GameMessage:addEventListener(GameMessage.exitGame,function()
         dump(self.tmCmdX,self.cacheName)
         GameStateManager:save({name = self.cacheName,data = self.tmCmdX})
         -- self:cleanup()
