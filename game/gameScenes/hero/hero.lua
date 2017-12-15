@@ -10,22 +10,26 @@ end
 function M:setData(  )
 	self.skills = {}
 end
-
+function M:initView( parent )
+	display.addSpriteFrames("fight/npc/animation_s_npc1_1_att1.plist","fight/npc/animation_s_npc1_1_att1.png")
+	local sprite=display.newSprite("#img_s_npc1_1_att1_01.png")
+	parent:addChild(sprite)
+end
 
 function M:updateView(  )
 	
 end
 
-function M:addSkill(  )
+function M:addBehavior(  )
 	
 end
 
-function M:move(  )
+-- function M:move(  )
 	
-end
+-- end
 
-function M:attack(  )
+-- function M:attack(  )
 	
-end
+-- end
 
 return M
