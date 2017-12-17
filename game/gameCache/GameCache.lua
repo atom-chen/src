@@ -1,5 +1,5 @@
 local M = {}
-cc(M):addComponent("components.behavior.EventProtocol"):exportMethods()
+-- cc(M):addComponent("components.behavior.EventProtocol"):exportMethods()
 --optional
 
 --给每个缓存增加个更新次数index，方便界面判断数据有无更新，需不需要重载数据
@@ -105,7 +105,7 @@ function M:deleteOne( id )
     end
 end
 function M:updateByProto( cmdX )
-    -- dump(cmdX)
+    dump(cmdX)
     self.tmCmdX[cmdX.id] = cmdX
     -- self:dispatchUpdateEvent(cmdX_old, hash)
     -- if self.tmCmdX[cmdX.id] then
@@ -114,6 +114,7 @@ function M:updateByProto( cmdX )
 
     -- end
     for view, tmCallback in pairs(self.tmView_bind) do
+        print("BBBBBBBBBB")
         local onUpdate = tmCallback.onUpdate
         if onUpdate then
             onUpdate(cmdX)

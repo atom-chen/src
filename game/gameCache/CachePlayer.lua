@@ -45,4 +45,9 @@ function M:levelup(  )
 	self:updateByProto(self.cache)
 end
 
+function M:hurt( atk )
+	self.cache.health = self.cache.health-atk
+	self:updateByProto(self.cache)
+end
+
 return M

@@ -14,7 +14,7 @@ function M.enterGame(  )
 	GameMessage:dispatchEvent{
         name = GameMessage.enterGame
     }
-	GameSceneMgr.replaceLayer("game.gameScenes.show.displayLayer")
+	GameSceneMgr.replaceLayer("game.gameScenes.login.loginLayer")
 end
 
 function M.exitGame(  )

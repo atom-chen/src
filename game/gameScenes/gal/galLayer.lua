@@ -24,10 +24,10 @@ function M:initView( parent )
         }
     label:setPosition( display.cx,display.cy/4)
     self.owner:addChild(label,2)
-    GameObj.ObjTimeEvent.addTimeEvent("test",10)
-    GameMessage:addEventListener("test",function()
-	    print("hahahahah")
-	end)
+ --    GameObj.ObjTimeEvent.addTimeEvent("test",10)
+ --    GameMessage:addEventListener("test",function()
+	--     print("hahahahah")
+	-- end)
 end
 
 function M:updateView(  )

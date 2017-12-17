@@ -15,5 +15,9 @@ end
 function M.clean(  )
 	calcTime = 0
 end
+--获取在某个范围内的单位，用于技能或攻击
+function M.getInRangeObj( ... )
+	-- body
+end
 
 return M

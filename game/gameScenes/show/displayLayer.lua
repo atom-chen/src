@@ -4,6 +4,8 @@
 --类似率土之滨的战斗一样的回合制
 local M = class("galLayer",GameNode)
 local hero = require("game.gameScenes.hero.hero")
+local attrbuteNode = nil
+local digestmenu = nil
 function M:ctor(  )
 	M.super.ctor(self)	
 end
@@ -16,12 +18,21 @@ end
 
 function M:initView( parent )
 	M.super.initView(self,parent)
-	local cache = GameCacheMgr.getGameCacheByName("CacheItem")
-	cache:newItem()
+	
 	self.owner = CCBReader.load("ccbi_hero_info_panel.ccbi")
 	parent:addChild(self.owner)
-	local hero1 = hero.new()
-	hero1:initView(parent)
+	self.owner.events.onBtnClosedClick = function()
+		GameSceneMgr.popLayer()
+	end
+	self.owner.events.onBtnArmyIconLeftClicked = function (  ) 
+	end
+	self.owner.events.onBtnArmyIconRightClicked = function (  )
+	end
+	-- local hero1 = hero.new()
+	-- hero1:initView(parent)
+	-- hero1:enterView()
+	-- local cache = GameCacheMgr.getGameCacheByName("CacheItem")
+	-- cache:newItem()
 	--左边展示形象
 	--右边分标签栏显示各种属性，已经吃了的东西
 	--下边显示消化中的道具

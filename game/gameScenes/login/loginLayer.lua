@@ -2,15 +2,18 @@
 -- Author: Your Name
 -- Date: 2017-12-01 21:54:36
 --
-local M = {}
+local M = class("galLayer",GameNode)
 
 function M:ctor(  )
-	owner = new("")
-	return owner
+	M.super.ctor(self)
 end
 
-function M:initView(  )
+function M:initView( parent )
+	-- M.super.initView(self,parent)
 	
+	display.addSpriteFrames("login/plist_ui_plist_login.plist","login/plist_ui_plist_login.png")
+	self.owner = CCBReader.load("ccbi_login.ccbi")
+    parent:addChild(self.owner)
 end
 
 function M:releaseView(  )

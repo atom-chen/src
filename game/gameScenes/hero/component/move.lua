@@ -1,3 +1,4 @@
+--
 -- Author: yjxin
 -- Date: 2016-08-29 23:32:42
 --
@@ -7,7 +8,9 @@ function M:ctor(params)
 	self:setData(params)
 end
 function M:setData(params )
-	self.actionName = params.xxx or ""
-	self.attSpeed = 1
+	self.speed = 0
+end
+
+function M:bindFunc( target )
 end
 return M
